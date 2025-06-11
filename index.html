@@ -9,14 +9,14 @@
     body {
       font-family: 'Space Grotesk', sans-serif;
       background-color: #f5f1ec;
-      color: #3e2e1f;
+      color: #4d5a2c;
       max-width: 800px;
       margin: 0 auto;
       padding: 2rem;
       line-height: 1.6;
     }
     h1, h2, h3 {
-      color: #3e2e1f;
+      color: #4d5a2c;
     }
     a {
       color: #4d5a2c;
@@ -34,6 +34,21 @@
       display: block;
       margin-bottom: 0.5rem;
     }
+    .header-content {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .headshot {
+      flex-shrink: 0;
+      width: 160px;
+      height: auto;
+      border-radius: 12px;
+    }
+    .intro-text {
+      flex: 1;
+    }
     img {
       max-width: 100%;
       border-radius: 12px;
@@ -43,9 +58,13 @@
 </head>
 <body>
   <header class="section">
-    <h1>Erin Abrams</h1>
-    <img src="headshot.jpg" alt="Headshot of Erin Abrams">
-    <p>Full‑stack product & design leader building thoughtful, scalable media experiences that prioritize user delight and impact.</p>
+    <div class="header-content">
+      <img src="headshot.jpg" alt="Headshot of Erin Abrams" class="headshot">
+      <div class="intro-text">
+        <h1>Erin Abrams</h1>
+        <p>Full‑stack product & design leader building thoughtful, scalable media experiences that prioritize user delight and impact.</p>
+      </div>
+    </div>
   </header>
 
   <section class="section">
