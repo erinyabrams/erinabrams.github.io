@@ -75,8 +75,9 @@
       display: block;
       margin-bottom: 0.5rem;
     }
-    img {
-      max-width: 100%;
+    img.project-img {
+      max-width: 80%;
+      cursor: pointer;
       border-radius: 12px;
       margin: 1rem 0;
     }
@@ -87,6 +88,12 @@
       margin-top: 2rem;
     }
   </style>
+  <script>
+    function expandImage(src) {
+      const imgWindow = window.open('', '_blank');
+      imgWindow.document.write(`<img src="${src}" style="width:100%">`);
+    }
+  </script>
 </head>
 <body>
   <nav>
@@ -104,18 +111,18 @@
   <main>
     <header class="section">
       <h1>Erin Abrams</h1>
-      <p>Full‑stack product & design leader building thoughtful, scalable media experiences that prioritize user delight and impact.</p>
+      <p>Full‑stack product & platform leader driving scalable media experiences through AI, analytics, and bold product strategy. I turn technical ambiguity into meaningful user impact and ship tools that simplify complexity across organizations.</p>
     </header>
 
     <section class="section" id="work">
       <h2>Work / Projects</h2>
       <h3>Principal Product Manager, <a href="https://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></h3>
       <p>Currently leading all product strategy and execution for Rate My Professors, with a focus on improving usability, increasing trust, and driving sustainable revenue growth. Introduced new professor and course discovery experiences, revamped ad infrastructure, and launched A/B-tested UX improvements. Exceeded revenue goals by 25% in the most recent quarter.</p>
-      <img src="rmp-example.png" alt="Example Rate My Professors profile">
+      <img src="rmp-example.png" alt="Example Rate My Professors profile" class="project-img" onclick="expandImage(this.src)">
 
       <h3>Technical Product Manager, Condé Nast – Verso Platform</h3>
       <p>Owned the product roadmap for Verso, Condé Nast’s design system and publishing platform used across brands like <em>The New Yorker</em> and <em>Vogue</em>. Collaborated with engineers and designers to scale reusable components, reduce redundant work, and ensure fast, consistent multi-brand deployments.</p>
-      <img src="newyorker.jpg" alt="The New Yorker magazine covers">
+      <img src="newyorker.jpg" alt="The New Yorker magazine covers" class="project-img" onclick="expandImage(this.src)">
 
       <h3>Data Product Manager, Condé Nast – Spire Data Platform</h3>
       <p>Led product for Spire, the company's proprietary data and targeting platform. Designed tools and pipelines that powered campaign targeting, real-time performance reporting, and high-ROI audience segments. Oversaw cross-functional data operations spanning strategy, privacy, and advertiser tooling.</p>
@@ -133,11 +140,11 @@
     <section class="section" id="reads">
       <h2>Favorite Reads</h2>
       <ul>
-        <li><em>Station Eleven</em> & everything by Emily St. John Mandel</li>
-        <li><em>The Wager</em></li>
+        <li><em>Station Eleven</em> – Emily St. John Mandel</li>
+        <li><em>The Wager</em> – David Grann</li>
         <li><em>They’re Going to Love You</em> – Meg Howrey</li>
-        <li><em>The Heaven & Earth Grocery Store</em></li>
-        <li><em>The Nightingale</em></li>
+        <li><em>The Heaven & Earth Grocery Store</em> – James McBride</li>
+        <li><em>The Nightingale</em> – Kristin Hannah</li>
       </ul>
     </section>
 
@@ -154,7 +161,7 @@
 
     <section class="section" id="now">
       <h2>Now & Side Projects</h2>
-      <p>Currently leading product for Rate My Professors with a focus on monetization, performance, and trust. Also exploring AI-enhanced review summarization and new data visualization dashboards. On the side, I’m working on organizing my home in Figma and slowly learning to make better coffee.</p>
+      <p>Currently driving product development and monetization strategy for Rate My Professors while exploring advanced AI applications in content moderation, personalization, and insight generation. Offline, I’ve been experimenting with creative vegan cooking and spoiling my spicy tortoiseshell cat, Honey.</p>
     </section>
 
     <section class="section contact" id="connect">
@@ -162,6 +169,7 @@
       <a href="https://www.linkedin.com/in/erinyaelabrams" target="_blank">LinkedIn</a>
       <a href="mailto:erinyaelabrams@gmail.com">erinyaelabrams@gmail.com</a>
       <a href="resume.pdf" target="_blank">Download Resume</a>
+      <a href="https://github.com/erinyabrams" target="_blank">GitHub</a>
     </section>
 
     <footer>
