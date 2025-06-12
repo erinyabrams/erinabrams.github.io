@@ -20,6 +20,9 @@
       padding: 2rem 1rem;
       border-right: 1px solid #d6c8b0;
       background-color: #faf9f6;
+      position: sticky;
+      top: 0;
+      height: 100vh;
     }
     nav img {
       width: 100%;
@@ -52,6 +55,21 @@
       margin-bottom: 3rem;
       border-left: 4px solid #d6c8b0;
       padding-left: 1rem;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 0.6s ease forwards;
+    }
+    .section:nth-child(even) {
+      animation-delay: 0.2s;
+    }
+    .section:nth-child(odd) {
+      animation-delay: 0.4s;
+    }
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: none;
+      }
     }
     .contact a {
       display: block;
@@ -62,15 +80,23 @@
       border-radius: 12px;
       margin: 1rem 0;
     }
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #888;
+      margin-top: 2rem;
+    }
   </style>
 </head>
 <body>
   <nav>
-    <img src="headshot.jpg" alt="Headshot of Erin Abrams">
+    <img src="headshot.jpg" alt="Erin’s headshot">
     <ul>
       <li><a href="#work">Work / Projects</a></li>
       <li><a href="#volunteer">Volunteer Work</a></li>
       <li><a href="#reads">Favorite Reads</a></li>
+      <li><a href="#skills">Skills & Tools</a></li>
+      <li><a href="#now">Now & Side Projects</a></li>
       <li><a href="#connect">Connect</a></li>
     </ul>
   </nav>
@@ -83,7 +109,6 @@
 
     <section class="section" id="work">
       <h2>Work / Projects</h2>
-
       <h3>Principal Product Manager, <a href="https://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></h3>
       <p>Currently leading all product strategy and execution for Rate My Professors, with a focus on improving usability, increasing trust, and driving sustainable revenue growth. Introduced new professor and course discovery experiences, revamped ad infrastructure, and launched A/B-tested UX improvements. Exceeded revenue goals by 25% in the most recent quarter.</p>
       <img src="rmp-example.png" alt="Example Rate My Professors profile">
@@ -98,7 +123,6 @@
 
     <section class="section" id="volunteer">
       <h2>Volunteer Work</h2>
-
       <h3>Brooklyn Cat Cafe</h3>
       <p>Volunteer on the main floor, supporting both guests and adoptable cats. I help maintain a welcoming, safe space for visitors, provide care and enrichment for the animals, and assist with adoption matchmaking to ensure cats are placed in loving homes.</p>
 
@@ -117,11 +141,32 @@
       </ul>
     </section>
 
+    <section class="section" id="skills">
+      <h2>Skills & Tools</h2>
+      <ul>
+        <li>Product Strategy</li>
+        <li>UX / UI Design Collaboration</li>
+        <li>Data Analytics & Experimentation</li>
+        <li>Full-stack PM Execution</li>
+        <li>SQL, Retool, Metabase, Google Analytics, Productboard, Jira</li>
+      </ul>
+    </section>
+
+    <section class="section" id="now">
+      <h2>Now & Side Projects</h2>
+      <p>Currently leading product for Rate My Professors with a focus on monetization, performance, and trust. Also exploring AI-enhanced review summarization and new data visualization dashboards. On the side, I’m working on organizing my home in Figma and slowly learning to make better coffee.</p>
+    </section>
+
     <section class="section contact" id="connect">
       <h2>Connect</h2>
       <a href="https://www.linkedin.com/in/erinyaelabrams" target="_blank">LinkedIn</a>
       <a href="mailto:erinyaelabrams@gmail.com">erinyaelabrams@gmail.com</a>
+      <a href="resume.pdf" target="_blank">Download Resume</a>
     </section>
+
+    <footer>
+      © 2025 Erin Abrams
+    </footer>
   </main>
 </body>
 </html>
