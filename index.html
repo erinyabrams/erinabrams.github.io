@@ -116,47 +116,6 @@
       margin-bottom: 0.25rem;
       text-transform: uppercase;
     }
-      @media (max-width: 768px) {
-      body {
-        flex-direction: column;
-        max-width: 100%;
-      }
-      nav {
-        flex: unset;
-        width: 100%;
-        height: auto;
-        border-right: none;
-        border-bottom: 1px solid #d6c8b0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-      }
-      nav img {
-        max-width: 150px;
-        margin-bottom: 1rem;
-      }
-      nav ul {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 1rem;
-        padding: 0;
-      }
-      nav li {
-        margin: 0;
-      }
-      main {
-        padding: 1.5rem;
-      }
-      .section {
-        padding-left: 0.75rem;
-        margin-bottom: 2rem;
-      }
-      img.project-img {
-        max-width: 100%;
-      }
-    }
   </style>
   <script>
     function expandImage(src) {
@@ -170,13 +129,7 @@
     }
   </script>
 </head>
-$1<main>
-  <section class="section" id="intro">
-    <h1>Erin Abrams</h1>
-    <p style="font-size: 0.9rem; color: #888; margin-top: -0.5rem;">Product Leader</p>
-    <p>Full‑stack product & platform leader driving scalable media experiences through AI, analytics, and bold product strategy. I turn technical ambiguity into meaningful user impact and ship tools that simplify complexity across organizations.</p>
-  </section>
-
+<body>
   <div id="lightbox" onclick="closeLightbox()">
     <img id="lightbox-img" src="" alt="Expanded image">
   </div>
@@ -193,18 +146,32 @@ $1<main>
     </ul>
   </nav>
 
-  
-      <section class="section" id="work">
-  <span class="label">Impact</span>
-  <h2>Highlights</h2>
-  <ul>
-    <li>📈 Surpassed quarterly revenue targets by 25%</li>
-    <li>🧪 Led A/B tests that improved user flow engagement by 12%</li>
-    <li>💰 Reduced platform operating costs by $800K/year</li>
-    <li>⚡ Cut deployment time by 60% through internal tooling</li>
-  </ul>
+  <main>
+    <section class="section" id="intro">
+      <h1>Erin Abrams</h1>
+      <p style="font-size: 0.9rem; color: #888; margin-top: -0.5rem;">Product Leader</p>
+      <p>Full‑stack product & platform leader driving scalable media experiences through AI, analytics, and bold product strategy. I turn technical ambiguity into meaningful user impact and ship tools that simplify complexity across organizations.</p>
+    </section>
 
-  <h2>Work / Projects</h2>
+    <section class="section" id="philosophy">
+      <h2>Product Philosophy</h2>
+      <span class="label">Approach</span>
+      <p>I believe product management is the art of reducing ambiguity at scale. I lead with clarity, align cross-functional teams around measurable outcomes, and always advocate for thoughtful user experiences. I'm equally energized by 0→1 systems design and continuous optimization—especially when it unlocks operational excellence or enables creativity across disciplines.</p>
+    </section>
+    
+    <section class="section" id="metrics">
+      <h2>Highlights</h2>
+      <span class="label">Impact</span>
+      <ul>
+        <li>📈 Surpassed monthly revenue targets by 25%</li>
+        <li>🧪 Led A/B tests that improved user flow engagement by 12%</li>
+        <li>💰 Reduced platform operating costs by $800K/year</li>
+        <li>⚡ Cut deployment time by 60% through internal tooling</li>
+      </ul>
+    </section>
+
+    <section class="section" id="work">
+      <h2>Work / Projects</h2>
       <h3>Principal Product Manager, <a href="https://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></h3>
       <p>Currently leading all product strategy and execution for Rate My Professors, with a focus on improving usability, increasing trust, and driving sustainable revenue growth. Introduced new professor and course discovery experiences, revamped ad infrastructure, and launched A/B-tested UX improvements. Exceeded revenue goals by 25% in the most recent quarter.</p>
       <img src="rmp-example.png" alt="Example Rate My Professors profile" class="project-img" onclick="expandImage(this.src)">
@@ -238,8 +205,8 @@ $1<main>
     </section>
 
     <section class="section" id="skills">
-      <span class="label">Toolbox</span>
       <h2>Skills & Tools</h2>
+      <span class="label">Toolbox</span>
       <ul>
         <li>Product Strategy</li>
         <li>UX / UI Design Collaboration</li>
