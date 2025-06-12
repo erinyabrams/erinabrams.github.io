@@ -59,10 +59,10 @@
       transform: translateY(20px);
       animation: fadeInUp 0.6s ease forwards;
     }
-    .section:nth-child(even) {
+    .section:nth-of-type(even) {
       animation-delay: 0.2s;
     }
-    .section:nth-child(odd) {
+    .section:nth-of-type(odd) {
       animation-delay: 0.4s;
     }
     @keyframes fadeInUp {
@@ -107,7 +107,7 @@
       color: #888;
       margin-top: 2rem;
     }
-      .label {
+    .label {
       display: block;
       font-size: 0.75rem;
       font-weight: bold;
@@ -146,7 +146,7 @@
     </ul>
   </nav>
 
-  
+  <main>
     <section class="section" id="metrics">
       <span class="label">Impact</span>
       <h2>Highlights</h2>
@@ -203,8 +203,8 @@
       </ul>
     </section>
 
-    <span class="label">Toolbox</span>
-
+    <section class="section" id="skills">
+      <span class="label">Toolbox</span>
       <h2>Skills & Tools</h2>
       <ul>
         <li>Product Strategy</li>
