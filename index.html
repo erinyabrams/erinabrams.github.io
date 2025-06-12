@@ -81,6 +81,26 @@
       border-radius: 12px;
       margin: 1rem 0;
     }
+    #lightbox {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.8);
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+    #lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 8px;
+    }
+    #lightbox.active {
+      display: flex;
+    }
     footer {
       text-align: center;
       font-size: 0.9rem;
@@ -90,12 +110,21 @@
   </style>
   <script>
     function expandImage(src) {
-      const imgWindow = window.open('', '_blank');
-      imgWindow.document.write(`<img src="${src}" style="width:100%">`);
+      const lightbox = document.getElementById('lightbox');
+      const img = document.getElementById('lightbox-img');
+      img.src = src;
+      lightbox.classList.add('active');
+    }
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('active');
     }
   </script>
 </head>
 <body>
+  <div id="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img" src="" alt="Expanded image">
+  </div>
+
   <nav>
     <img src="headshot.jpg" alt="Erin’s headshot">
     <ul>
@@ -103,7 +132,7 @@
       <li><a href="#volunteer">Volunteer Work</a></li>
       <li><a href="#reads">Favorite Reads</a></li>
       <li><a href="#skills">Skills & Tools</a></li>
-      <li><a href="#now">Now & Side Projects</a></li>
+      <li><a href="#now">Current Focus</a></li>
       <li><a href="#connect">Connect</a></li>
     </ul>
   </nav>
@@ -160,8 +189,8 @@
     </section>
 
     <section class="section" id="now">
-      <h2>Now & Side Projects</h2>
-      <p>Currently driving product development and monetization strategy for Rate My Professors while exploring advanced AI applications in content moderation, personalization, and insight generation. Offline, I’ve been experimenting with creative vegan cooking and spoiling my spicy tortoiseshell cat, Honey.</p>
+      <h2>Current Focus</h2>
+      <p>Currently driving product development and monetization strategy for Rate My Professors while exploring advanced AI applications in content moderation, personalization, and insight generation. Offline, I’ve been experimenting with creative vegan cooking and spoiling my spicy tortoiseshell cat, Honey. I also have a deep personal interest in the cultural arts - an art history minor who never lost her love for museums, architecture, and storytelling through visual mediums.</p>
     </section>
 
     <section class="section contact" id="connect">
