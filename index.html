@@ -10,20 +10,43 @@
       font-family: 'Space Grotesk', sans-serif;
       background-color: #f5f1ec;
       color: #4d5a2c;
-      max-width: 800px;
+      display: flex;
+      max-width: 1000px;
       margin: 0 auto;
-      padding: 2rem;
       line-height: 1.6;
+    }
+    nav {
+      flex: 0 0 200px;
+      padding: 2rem 1rem;
+      border-right: 1px solid #d6c8b0;
+      background-color: #faf9f6;
+    }
+    nav img {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 2rem;
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+    }
+    nav li {
+      margin-bottom: 1rem;
+    }
+    nav a {
+      color: #4d5a2c;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    main {
+      flex: 1;
+      padding: 2rem;
     }
     h1, h2, h3 {
       color: #4d5a2c;
-    }
-    a {
-      color: #4d5a2c;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
     }
     .section {
       margin-bottom: 3rem;
@@ -34,21 +57,6 @@
       display: block;
       margin-bottom: 0.5rem;
     }
-    .header-content {
-      display: flex;
-      align-items: center;
-      gap: 1.5rem;
-      flex-wrap: wrap;
-    }
-    .headshot {
-      flex-shrink: 0;
-      width: 160px;
-      height: auto;
-      border-radius: 12px;
-    }
-    .intro-text {
-      flex: 1;
-    }
     img {
       max-width: 100%;
       border-radius: 12px;
@@ -57,56 +65,63 @@
   </style>
 </head>
 <body>
-  <header class="section">
-    <div class="header-content">
-      <img src="headshot.jpg" alt="Headshot of Erin Abrams" class="headshot">
-      <div class="intro-text">
-        <h1>Erin Abrams</h1>
-        <p>Full‑stack product & design leader building thoughtful, scalable media experiences that prioritize user delight and impact.</p>
-      </div>
-    </div>
-  </header>
-
-  <section class="section">
-    <h2>Work / Projects</h2>
-
-    <h3>Principal Product Manager, <a href="https://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></h3>
-    <p>Currently leading all product strategy and execution for Rate My Professors, with a focus on improving usability, increasing trust, and driving sustainable revenue growth. Introduced new professor and course discovery experiences, revamped ad infrastructure, and launched A/B-tested UX improvements. Exceeded revenue goals by 25% in the most recent quarter.</p>
-    <img src="rmp-example.png" alt="Example Rate My Professors profile">
-
-    <h3>Technical Product Manager, Condé Nast – Verso Platform</h3>
-    <p>Owned the product roadmap for Verso, Condé Nast’s design system and publishing platform used across brands like <em>The New Yorker</em> and <em>Vogue</em>. Collaborated with engineers and designers to scale reusable components, reduce redundant work, and ensure fast, consistent multi-brand deployments.</p>
-    <img src="newyorker.jpg" alt="The New Yorker magazine covers">
-
-    <h3>Data Product Manager, Condé Nast – Spire Data Platform</h3>
-    <p>Led product for Spire, the company's proprietary data and targeting platform. Designed tools and pipelines that powered campaign targeting, real-time performance reporting, and high-ROI audience segments. Oversaw cross-functional data operations spanning strategy, privacy, and advertiser tooling.</p>
-  </section>
-
-  <section class="section">
-    <h2>Volunteer Work</h2>
-
-    <h3>Brooklyn Cat Cafe</h3>
-    <p>Serve as volunteer coordinator and adoption event organizer—managing on-the-ground operations and increasing cat adoption rates through digital promotions and community partnerships.</p>
-
-    <h3>Planned Parenthood</h3>
-    <p>Support outreach and education initiatives, facilitating workshops and donor engagement to advance healthcare access and reproductive rights.</p>
-  </section>
-
-  <section class="section">
-    <h2>Favorite Reads</h2>
+  <nav>
+    <img src="headshot.jpg" alt="Headshot of Erin Abrams">
     <ul>
-      <li><em>Station Eleven</em> & everything by Emily St. John Mandel</li>
-      <li><em>The Wager</em></li>
-      <li><em>They’re Going to Love You</em> – Meg Howrey</li>
-      <li><em>The Heaven & Earth Grocery Store</em></li>
-      <li><em>The Nightingale</em></li>
+      <li><a href="#work">Work / Projects</a></li>
+      <li><a href="#volunteer">Volunteer Work</a></li>
+      <li><a href="#reads">Favorite Reads</a></li>
+      <li><a href="#connect">Connect</a></li>
     </ul>
-  </section>
+  </nav>
 
-  <section class="section contact">
-    <h2>Connect</h2>
-    <a href="https://www.linkedin.com/in/erinyaelabrams" target="_blank">LinkedIn</a>
-    <a href="mailto:erinyaelabrams@gmail.com">erinyaelabrams@gmail.com</a>
-  </section>
+  <main>
+    <header class="section">
+      <h1>Erin Abrams</h1>
+      <p>Full‑stack product & design leader building thoughtful, scalable media experiences that prioritize user delight and impact.</p>
+    </header>
+
+    <section class="section" id="work">
+      <h2>Work / Projects</h2>
+
+      <h3>Principal Product Manager, <a href="https://www.ratemyprofessors.com" target="_blank">Rate My Professors</a></h3>
+      <p>Currently leading all product strategy and execution for Rate My Professors, with a focus on improving usability, increasing trust, and driving sustainable revenue growth. Introduced new professor and course discovery experiences, revamped ad infrastructure, and launched A/B-tested UX improvements. Exceeded revenue goals by 25% in the most recent quarter.</p>
+      <img src="rmp-example.png" alt="Example Rate My Professors profile">
+
+      <h3>Technical Product Manager, Condé Nast – Verso Platform</h3>
+      <p>Owned the product roadmap for Verso, Condé Nast’s design system and publishing platform used across brands like <em>The New Yorker</em> and <em>Vogue</em>. Collaborated with engineers and designers to scale reusable components, reduce redundant work, and ensure fast, consistent multi-brand deployments.</p>
+      <img src="newyorker.jpg" alt="The New Yorker magazine covers">
+
+      <h3>Data Product Manager, Condé Nast – Spire Data Platform</h3>
+      <p>Led product for Spire, the company's proprietary data and targeting platform. Designed tools and pipelines that powered campaign targeting, real-time performance reporting, and high-ROI audience segments. Oversaw cross-functional data operations spanning strategy, privacy, and advertiser tooling.</p>
+    </section>
+
+    <section class="section" id="volunteer">
+      <h2>Volunteer Work</h2>
+
+      <h3>Brooklyn Cat Cafe</h3>
+      <p>Volunteer on the main floor, supporting both guests and adoptable cats. I help maintain a welcoming, safe space for visitors, provide care and enrichment for the animals, and assist with adoption matchmaking to ensure cats are placed in loving homes.</p>
+
+      <h3>Planned Parenthood</h3>
+      <p>Served as a volunteer patient escort, helping individuals safely and privately access care by providing a calm, supportive presence outside the clinic. I ensured patients could enter the building without facing intimidation or harassment.</p>
+    </section>
+
+    <section class="section" id="reads">
+      <h2>Favorite Reads</h2>
+      <ul>
+        <li><em>Station Eleven</em> & everything by Emily St. John Mandel</li>
+        <li><em>The Wager</em></li>
+        <li><em>They’re Going to Love You</em> – Meg Howrey</li>
+        <li><em>The Heaven & Earth Grocery Store</em></li>
+        <li><em>The Nightingale</em></li>
+      </ul>
+    </section>
+
+    <section class="section contact" id="connect">
+      <h2>Connect</h2>
+      <a href="https://www.linkedin.com/in/erinyaelabrams" target="_blank">LinkedIn</a>
+      <a href="mailto:erinyaelabrams@gmail.com">erinyaelabrams@gmail.com</a>
+    </section>
+  </main>
 </body>
 </html>
