@@ -1,4 +1,4 @@
-# erinabrams.github.io
+# erinyabrams.github.io
 
 Personal portfolio site. Live at [erinabrams.com](https://erinabrams.com).
 
